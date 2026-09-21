@@ -1,0 +1,2659 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mediax – Health & Medical</title>
+
+    <meta
+      name="description"
+      content="Mediax Dental Clinic — professional dental care in New York. Book your appointment online."
+    />
+    <meta property="og:title" content="Mediax – Health & Medical" />
+    <meta
+      property="og:description"
+      content="Best dental care in town. Book online in under a minute."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0e1e45" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style/style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: { DEFAULT: "#0e1e45", dark: "#0a1530", deep: "#060d22", backgrnd: "#2a7faa"},
+              brand: { green: "#2bab6b", blue: "#1d4ed8", sky: "#3b82f6" },
+              mist: "#eef3fa",
+            },
+            fontFamily: { sans: ["Poppins", "sans-serif"] },
+          },
+        },
+      };
+    </script>
+
+     <style>
+    /* ----- your original slider CSS (slightly refined) ----- */
+    .slider-viewport {
+      overflow: hidden;
+      position: relative;
+    }
+    .slider-track {
+      display: flex;
+      transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: transform;
+    }
+    .slider-slide {
+      flex: 0 0 100%;
+      min-width: 100%;
+    }
+    /* small screens: exactly one card */
+    @media (min-width: 640px) {
+      .slider-slide--studio {
+        flex: 0 0 50%;
+        min-width: 50%;
+      }
+      .slider-slide--team {
+        flex: 0 0 50%;
+        min-width: 50%;
+      }
+    }
+    @media (min-width: 1024px) {
+      .slider-slide--studio {
+        flex: 0 0 33.333%;
+        min-width: 33.333%;
+      }
+      .slider-slide--team {
+        flex: 0 0 25%;
+        min-width: 25%;
+      }
+    }
+
+    .slider-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #cbd5e1;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+      padding: 0;
+    }
+    .slider-dot.active {
+      background: #2bab6b;
+      transform: scale(1.25);
+    }
+    .slider-dot:focus-visible {
+      outline: 2px solid #2bab6b;
+      outline-offset: 2px;
+    }
+    .slider-arrow {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1.5px solid #e2e8f0;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: #0f172a;
+      transition: all 0.25s ease;
+      flex-shrink: 0;
+    }
+    .slider-arrow:hover {
+      border-color: #2bab6b;
+      color: #1e8a52;
+      background: #e6fbfa;
+    }
+
+    /* small visual polish for demo – you already have these classes */
+    .section-eyebrow { letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.8rem; font-weight: 600; color: #2bab6b; }
+    .text-navy { color: #0f172a; }
+    .text-primary { color: #2bab6b; }
+    .text-primary-dark { color: #1e8a52; }
+    .text-muted { color: #64748b; }
+    .border-border { border-color: #e2e8f0; }
+    .card-lift { transition: transform 0.25s, box-shadow 0.25s; }
+    .card-lift:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.05); }
+    .studio { background: #f8fafc; }
+    .smile-divider path { fill: #f8fafc; }
+    .btn-outline { border: 1px solid #cbd5e1; transition: all 0.2s; }
+    .btn-outline:hover { border-color: #2bab6b; color: #2bab6b; }
+  </style>
+  </head>
+
+  <body class="text-navy antialiased overflow-x-hidden">
+    <!-- ============ TOP BAR ============ -->
+    <div class="bg-white border-b border-navy/10 hidden md:block">
+      <div
+        class="max-w-7xl mx-auto px-4 lg:px-8 h-9 flex items-center justify-between text-[11px] text-navy/70"
+      >
+        <p>
+          Welcome to
+          <span class="text-brand-green font-semibold">Mediax</span> – Health
+          &amp; Medical Clinic
+        </p>
+        <div class="flex items-center gap-4">
+          <span class="flex items-center gap-1.5"
+            ><i class="fa-solid fa-location-dot text-brand-green"></i> 128
+            Street, New York, USA</span
+          >
+          <span class="flex items-center gap-3 text-navy/50">
+            <a href="#" class="hover:text-brand-green"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a href="#" class="hover:text-brand-green"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+            <a href="#" class="hover:text-brand-green"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#" class="hover:text-brand-green"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ HEADER ============ -->
+    <header class="bg-navy-dark sticky top-0 z-50">
+      <div
+        class="max-w-7xl mx-auto px-4 lg:px-8 h-20 flex items-center justify-between gap-6"
+      >
+        <!-- logo -->
+        <a href="#" class="flex items-center gap-2.5 shrink-0">
+          <span
+            class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#0d7a47] to-[#1fae63] grid place-items-center shadow-lg shadow-green-900/40"
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6V3z"
+                fill="#eafff3"
+                opacity=".95"
+              />
+            </svg>
+          </span>
+          <span class="text-white text-2xl font-bold tracking-tight"
+            >Mediax</span
+          >
+        </a>
+
+        <!-- nav -->
+        <nav
+          class="hidden lg:flex items-center gap-9 text-[13px] font-medium text-white/85"
+        >
+          <a href="#" class="nav-link hover:text-white transition">Home</a>
+          <a
+            href="#services"
+            class="nav-link hover:text-white transition flex items-center gap-1.5"
+            >Services
+            <i class="fa-solid fa-chevron-down text-[9px] text-white/50"></i
+          ></a>
+          <a
+            href="#"
+            class="nav-link hover:text-white transition flex items-center gap-1.5"
+            >Pages
+            <i class="fa-solid fa-chevron-down text-[9px] text-white/50"></i
+          ></a>
+          <a
+            href="#"
+            class="nav-link hover:text-white transition flex items-center gap-1.5"
+            >Blog
+            <i class="fa-solid fa-chevron-down text-[9px] text-white/50"></i
+          ></a>
+          <a href="#contact" class="nav-link hover:text-white transition"
+            >Contact</a
+          >
+        </nav>
+
+        <!-- right -->
+        <div class="flex items-center gap-4">
+          <button
+            class="hidden sm:grid w-10 h-10 rounded-full border border-white/15 text-white place-items-center hover:bg-white/10 transition"
+            aria-label="Search"
+          >
+            <i class="fa-solid fa-magnifying-glass text-sm"></i>
+          </button>
+          <a
+            href="#appointment"
+            class="hidden md:flex items-center gap-2.5 btn-blue text-white text-[12.5px] font-semibold pl-3.5 pr-5 py-2.5 rounded-lg shadow-lg shadow-blue-950/50"
+          >
+            <span
+              class="w-7 h-7 rounded-full bg-white/20 grid place-items-center"
+              ><i class="fa-solid fa-phone-volume text-[11px]"></i
+            ></span>
+            Need Any Help: +91 8273776670
+          </a>
+          <button
+            id="menuBtn"
+            class="lg:hidden w-10 h-10 grid place-items-center text-white"
+            aria-label="Menu"
+          >
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- mobile menu -->
+      <div
+        id="mobileMenu"
+        class="lg:hidden hidden border-t border-white/10 bg-navy-dark"
+      >
+        <nav class="px-6 py-4 flex flex-col gap-1 text-sm text-white/85">
+          <a href="#" class="py-2.5 border-b border-white/5">Home</a>
+          <a href="#services" class="py-2.5 border-b border-white/5"
+            >Services</a
+          >
+          <a href="#" class="py-2.5 border-b border-white/5">Pages</a>
+          <a href="#" class="py-2.5 border-b border-white/5">Blog</a>
+          <a href="#contact" class="py-2.5">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero-bg relative overflow-hidden">
+
+      <!-- Bubbles -->
+      <div class="bubbles">
+        <div
+          class="bubble"
+          style="
+            width: 120px;
+            height: 120px;
+            top: 10%;
+            left: 5%;
+            animation-delay: 0s;
+          "
+        ></div>
+        <div
+          class="bubble"
+          style="
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 15%;
+            animation-delay: 2s;
+          "
+        ></div>
+        <div
+          class="bubble"
+          style="
+            width: 160px;
+            height: 160px;
+            top: 60%;
+            left: 8%;
+            animation-delay: 4s;
+            opacity: 0.6;
+          "
+        ></div>
+        <div
+          class="bubble"
+          style="
+            width: 100px;
+            height: 100px;
+            top: 15%;
+            right: 8%;
+            animation-delay: 1s;
+          "
+        ></div>
+        <div
+          class="bubble"
+          style="
+            width: 60px;
+            height: 60px;
+            top: 70%;
+            right: 15%;
+            animation-delay: 3s;
+          "
+        ></div>
+        <div
+          class="bubble"
+          style="
+            width: 140px;
+            height: 140px;
+            bottom: 10%;
+            right: 5%;
+            animation-delay: 5s;
+            opacity: 0.5;
+          "
+        ></div>
+      </div>
+
+      <div class="hero-shape absolute inset-0 pointer-events-none"></div>
+      <div
+        class="absolute -top-24 -right-24 w-96 h-96 rounded-full border-[30px] border-white/5 pointer-events-none"
+      ></div>
+      <div
+        class="absolute top-24 right-[30%] w-40 h-40 rounded-full border border-white/10 pointer-events-none hidden md:block"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-4 lg:px-8 relative">
+        <div
+          class="grid lg:grid-cols-2 items-center pt-14 lg:pt-20 pb-32 lg:pb-36"
+        >
+          <!-- left copy -->
+          <div class="text-center lg:text-left relative z-10">
+            <span
+              class="inline-block bg-brand-green/95 text-white text-[10.5px] font-semibold tracking-[3px] uppercase px-4 py-1.5 rounded-full shadow-lg shadow-green-900/30"
+            >
+              Professional Dentist
+            </span>
+            <h1
+              class="mt-5 text-white font-extrabold leading-[1.12] text-[38px] sm:text-5xl xl:text-[56px]"
+            >
+              BEST DENTAL<br />CARE IN TOWN
+            </h1>
+            <p
+              class="mt-5 text-white/90 text-[13.5px] leading-relaxed max-w-md mx-auto lg:mx-0"
+            >
+              We are committed to providing you with the best dental care. Our
+              experienced team uses advanced technology to keep your smile
+              healthy and bright.
+            </p>
+            <div
+              class="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-4"
+            >
+              <a
+                href="#appointment"
+                class="btn-green text-white text-[12.5px] font-semibold px-7 py-3.5 rounded-lg flex items-center gap-2 shadow-xl shadow-green-900/30"
+              >
+                <i class="fa-regular fa-calendar-check"></i> Book A Reservation
+              </a>
+              <a
+                href="tel:+918273776670"
+                class="border-2 border-white/60 text-white text-[12.5px] font-semibold px-7 py-3.5 rounded-lg flex items-center gap-2 hover:bg-white/10 transition"
+              >
+                <i class="fa-solid fa-phone-volume"></i> Make A Call
+              </a>
+            </div>
+          </div>
+
+          <!-- right image -->
+          <div
+            class="relative mt-10 lg:mt-0 flex justify-center lg:justify-end"
+          >
+            <div
+              class="absolute w-[115%] h-[115%] rounded-full bg-white/5 -z-0 hidden lg:block"
+            ></div>
+            <img
+              src="./images/hero.jpg"
+              alt="Professional dentist"
+              width="820"
+              height="1000"
+              fetchpriority="high"
+              class="hero-img-mask relative z-10 w-[320px] sm:w-[420px] lg:w-[500px] object-cover object-[center_25%] rounded-t-[999px]"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+    <!-- ============ QUICK APPOINTMENT CARD ============ -->
+<div id="quick-appointment" class="relative z-20 -mt-20 lg:-mt-24 px-4">
+  <div
+    class="max-w-5xl mx-auto bg-white rounded-2xl shadow-2xl shadow-navy/15 p-6 lg:p-7 flex flex-col lg:flex-row items-stretch gap-6"
+  >
+
+    <div
+      class="lg:w-52 shrink-0 flex flex-col justify-center lg:border-r border-navy/10 lg:pr-7"
+    >
+      <h3 class="text-navy font-bold text-xl leading-snug">
+        Book An<br />Appointment
+      </h3>
+
+      <span class="mt-2 h-1 w-10 rounded-full bg-brand-green"></span>
+    </div>
+
+    <!-- Appointment Form -->
+    <form
+      id="quickAppointmentForm"
+      class="flex-1 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 items-center"
+    >
+
+      <!-- Name -->
+      <input
+        id="appointmentName"
+        type="text"
+        placeholder="Your Name"
+        required
+        class="h-12 px-4 rounded-lg bg-[#f4f7fc] border border-navy/5 text-[13px] outline-none focus:ring-2 focus:ring-brand-green/50 placeholder:text-navy/40"
+      />
+
+      <!-- Doctor -->
+      <select
+        id="appointmentDoctor"
+        required
+        class="h-12 px-3 rounded-lg bg-[#f4f7fc] border border-navy/5 text-[13px] text-navy/60 outline-none focus:ring-2 focus:ring-brand-green/50"
+      >
+        <option value="">Choose Doctor</option>
+        <option value="Dr. Brandy Hike">Dr. Brandy Hike</option>
+        <option value="Dr. Samantha Fox">Dr. Samantha Fox</option>
+      </select>
+
+      <!-- Department -->
+      <select
+        id="appointmentDepartment"
+        required
+        class="h-12 px-3 rounded-lg bg-[#f4f7fc] border border-navy/5 text-[13px] text-navy/60 outline-none focus:ring-2 focus:ring-brand-green/50"
+      >
+        <option value="">Select Department</option>
+        <option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
+        <option value="Oral Surgery">Oral Surgery</option>
+      </select>
+
+      <!-- WhatsApp Button -->
+      <button
+        type="submit"
+        class="btn-green h-12 rounded-lg text-white text-[12.5px] font-semibold flex items-center justify-center gap-2 shadow-lg shadow-green-600/25 hover:opacity-95 transition"
+      >
+        <i class="fa-brands fa-whatsapp text-sm"></i>
+        Book Appointment
+      </button>
+
+    </form>
+  </div>
+</div>
+
+
+    <!-- ============ FEATURES STRIP ============ -->
+    <section class="pt-16 pb-8" id="feature">
+      <div class="max-w-7xl mx-auto px-4 lg:px-8">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
+          <div class="flex items-start gap-4">
+            <span
+              class="w-14 h-14 shrink-0 rounded-xl bg-mist grid place-items-center text-navy text-xl"
+              ><i class="fa-solid fa-award"></i
+            ></span>
+            <div>
+              <h4 class="font-semibold text-[14.5px]">Experienced Doctor</h4>
+              <p class="mt-1 text-[11.5px] text-navy/50 leading-relaxed">
+                We have highly experienced &amp; skilled doctors.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <span
+              class="w-14 h-14 shrink-0 rounded-xl bg-mist grid place-items-center text-navy text-xl"
+              ><i class="fa-solid fa-hospital"></i
+            ></span>
+            <div>
+              <h4 class="font-semibold text-[14.5px]">Clinical Department</h4>
+              <p class="mt-1 text-[11.5px] text-navy/50 leading-relaxed">
+                We have the most advanced clinical departments.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <span
+              class="w-14 h-14 shrink-0 rounded-xl bg-mist grid place-items-center text-navy text-xl"
+              ><i class="fa-solid fa-teeth-open"></i
+            ></span>
+            <div>
+              <h4 class="font-semibold text-[14.5px]">Top Dental Equipment</h4>
+              <p class="mt-1 text-[11.5px] text-navy/50 leading-relaxed">
+                We use the latest dental equipment &amp; tools.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <span
+              class="w-14 h-14 shrink-0 rounded-xl bg-mist grid place-items-center text-navy text-xl"
+              ><i class="fa-regular fa-clock"></i
+            ></span>
+            <div>
+              <h4 class="font-semibold text-[14.5px]">24/7 Advance Care</h4>
+              <p class="mt-1 text-[11.5px] text-navy/50 leading-relaxed">
+                We provide advanced dental care 24 hours a day.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section
+      id="services"
+      class="relative bg-[#f7fafe] py-20 lg:py-24 overflow-hidden"
+    >
+
+    <!-- <div
+        class="absolute bottom-0 right-0 w-[400px] h-[200px] bg-navy-backgrnd/80 rounded-full blur-[100px] pointer-events-none"
+      ></div>
+      <div
+        class="absolute top-0 left-0 w-[400px] h-[200px] bg-navy-backgrnd/80 rounded-full blur-[120px] pointer-events-none"
+      ></div> -->
+      
+
+
+      <svg
+        class="absolute -left-8 top-1/2 -translate-y-1/2 w-64 opacity-[.07] text-navy pointer-events-none"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path
+          d="M12 2C7.6 2 4.5 4.7 4.5 8.2c0 1.9.8 3.4 1.4 4.9.6 1.4 1 3 1.1 4.6.1 1.4.7 3.8 1.9 3.8 1.5 0 1.2-2.3 1.6-3.8.3-1.1.7-1.9 1.8-1.9s1.5.8 1.8 1.9c.4 1.5.1 3.8 1.6 3.8 1.2 0 1.8-2.4 1.9-3.8.1-1.6.5-3.2 1.1-4.6.6-1.5 1.4-3 1.4-4.9C19.5 4.7 16.4 2 12 2z"
+        />
+      </svg>
+
+      <div class="max-w-7xl mx-auto px-4 lg:px-8 relative">
+        <div class="text-center">
+          <div class="flex items-center justify-center gap-3">
+            <span class="h-px w-10 bg-brand-green/60"></span>
+            <span
+              class="text-brand-green text-[11px] font-semibold tracking-[3px] uppercase"
+              >Our Services</span
+            >
+            <span class="h-px w-10 bg-brand-green/60"></span>
+          </div>
+          <h2 class="mt-3 text-3xl lg:text-4xl font-bold text-navy">
+            Best Dental Service For You
+          </h2>
+
+          <button
+            class="hidden lg:grid absolute right-6 top-4 w-11 h-11 rounded-lg bg-brand-green text-white text-xl place-items-center shadow-lg shadow-green-600/30 float-slow"
+            aria-label="Add service"
+          >
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+
+        <div class="mt-14 flex flex-wrap justify-center items-stretch gap-5">
+          <div
+            class="group w-40 lg:w-44 h-[340px] bg-mist rounded-2xl p-6 flex flex-col items-center hover:bg-navy transition-colors duration-300 cursor-pointer"
+          >
+            <span
+              class="w-12 h-12 rounded-full bg-white shadow grid place-items-center text-brand-blue text-lg group-hover:scale-110 transition"
+              ><i class="fa-solid fa-tooth"></i
+            ></span>
+            <span
+              class="v-text mt-8 text-[13.5px] font-semibold text-navy/80 group-hover:text-white"
+              >Cosmetic Dentistry</span
+            >
+          </div>
+
+          <div
+            class="group w-40 lg:w-44 h-[340px] bg-mist rounded-2xl p-6 flex flex-col items-center hover:bg-navy transition-colors duration-300 cursor-pointer"
+          >
+            <span
+              class="w-12 h-12 rounded-full bg-white shadow grid place-items-center text-brand-green text-lg group-hover:scale-110 transition"
+              ><i class="fa-solid fa-teeth"></i
+            ></span>
+            <span
+              class="v-text mt-8 text-[13.5px] font-semibold text-navy/80 group-hover:text-white"
+              >Orthodontics</span
+            >
+          </div>
+
+          <div
+            class="group w-full sm:w-[340px] h-[340px] bg-white rounded-2xl shadow-xl shadow-navy/10 border border-navy/5 p-8 flex flex-col cursor-pointer"
+          >
+            <span
+              class="w-12 h-12 rounded-full bg-mist grid place-items-center text-brand-blue text-lg"
+              ><i class="fa-solid fa-user-doctor"></i
+            ></span>
+            <h3 class="mt-5 text-xl font-bold text-navy">Oral Surgery</h3>
+            <ul class="mt-4 space-y-2.5 text-[12px] text-navy/60">
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-check text-brand-green text-[10px]"></i>
+                Painless modern procedures
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-check text-brand-green text-[10px]"></i>
+                Highly experienced surgeons
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-check text-brand-green text-[10px]"></i>
+                Advanced surgical equipment
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-check text-brand-green text-[10px]"></i>
+                Affordable treatment plans
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-check text-brand-green text-[10px]"></i>
+                Quick recovery guarantee
+              </li>
+            </ul>
+            <a
+              href="#"
+              class="mt-auto text-[12.5px] font-semibold text-brand-green flex items-center gap-2"
+              >Read More <i class="fa-solid fa-arrow-right text-[10px]"></i
+            ></a>
+          </div>
+
+          <div
+            class="group w-40 lg:w-44 h-[340px] bg-mist rounded-2xl p-6 flex flex-col items-center hover:bg-navy transition-colors duration-300 cursor-pointer"
+          >
+            <span
+              class="w-12 h-12 rounded-full bg-white shadow grid place-items-center text-brand-blue text-lg group-hover:scale-110 transition"
+              ><i class="fa-solid fa-teeth-open"></i
+            ></span>
+            <span
+              class="v-text mt-8 text-[13.5px] font-semibold text-navy/80 group-hover:text-white"
+              >Root Canal Treatment</span
+            >
+          </div>
+
+          <div
+            class="group w-40 lg:w-44 h-[340px] bg-mist rounded-2xl p-6 flex flex-col items-center hover:bg-navy transition-colors duration-300 cursor-pointer"
+          >
+            <span
+              class="w-12 h-12 rounded-full bg-white shadow grid place-items-center text-brand-green text-lg group-hover:scale-110 transition"
+              ><i class="fa-solid fa-baby"></i
+            ></span>
+            <span
+              class="v-text mt-8 text-[13.5px] font-semibold text-navy/80 group-hover:text-white"
+              >Pediatric Dentistry</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="relative py-20 lg:py-24 bg-white overflow-hidden" id="about">
+      <svg
+        class="absolute right-6 top-10 w-24 opacity-10 text-brand-blue rotate-12 pointer-events-none"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path
+          d="M12 2C7.6 2 4.5 4.7 4.5 8.2c0 1.9.8 3.4 1.4 4.9.6 1.4 1 3 1.1 4.6.1 1.4.7 3.8 1.9 3.8 1.5 0 1.2-2.3 1.6-3.8.3-1.1.7-1.9 1.8-1.9s1.5.8 1.8 1.9c.4 1.5.1 3.8 1.6 3.8 1.2 0 1.8-2.4 1.9-3.8.1-1.6.5-3.2 1.1-4.6.6-1.5 1.4-3 1.4-4.9C19.5 4.7 16.4 2 12 2z"
+        />
+      </svg>
+      <svg
+        class="absolute left-4 bottom-16 w-20 opacity-10 text-brand-green -rotate-12 pointer-events-none"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path
+          d="M12 2C7.6 2 4.5 4.7 4.5 8.2c0 1.9.8 3.4 1.4 4.9.6 1.4 1 3 1.1 4.6.1 1.4.7 3.8 1.9 3.8 1.5 0 1.2-2.3 1.6-3.8.3-1.1.7-1.9 1.8-1.9s1.5.8 1.8 1.9c.4 1.5.1 3.8 1.6 3.8 1.2 0 1.8-2.4 1.9-3.8.1-1.6.5-3.2 1.1-4.6.6-1.5 1.4-3 1.4-4.9C19.5 4.7 16.4 2 12 2z"
+        />
+      </svg>
+
+      <div
+        class="max-w-7xl mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-16 lg:gap-12 items-center"
+      >
+        <div>
+          <div class="flex items-center gap-3">
+            <span class="h-px w-10 bg-brand-green/60"></span>
+            <span
+              class="text-brand-green text-[11px] font-semibold tracking-[3px] uppercase"
+              >More About Us</span
+            >
+          </div>
+          <h2
+            class="mt-3 text-3xl lg:text-[38px] leading-tight font-bold text-navy max-w-md"
+          >
+            Your Great Smile Begins With A Great Dentist
+          </h2>
+          <p class="mt-5 text-[13px] text-navy/55 leading-relaxed max-w-md">
+            Our clinic combines modern technology with compassionate care. Every
+            treatment plan is tailored to you, so you can enjoy a healthy,
+            confident smile for life.
+          </p>
+
+          <ul
+            class="mt-6 grid grid-cols-2 gap-x-6 gap-y-3 max-w-md text-[12.5px] font-medium text-navy/80"
+          >
+            <li class="flex items-center gap-2.5">
+              <span
+                class="w-5 h-5 rounded-full bg-brand-green/15 text-brand-green grid place-items-center text-[9px]"
+                ><i class="fa-solid fa-check"></i></span
+              >Braces &amp; Aligners
+            </li>
+            <li class="flex items-center gap-2.5">
+              <span
+                class="w-5 h-5 rounded-full bg-brand-green/15 text-brand-green grid place-items-center text-[9px]"
+                ><i class="fa-solid fa-check"></i></span
+              >Whitening &amp; Care
+            </li>
+            <li class="flex items-center gap-2.5">
+              <span
+                class="w-5 h-5 rounded-full bg-brand-green/15 text-brand-green grid place-items-center text-[9px]"
+                ><i class="fa-solid fa-check"></i></span
+              >Implants &amp; Crowns
+            </li>
+            <li class="flex items-center gap-2.5">
+              <span
+                class="w-5 h-5 rounded-full bg-brand-green/15 text-brand-green grid place-items-center text-[9px]"
+                ><i class="fa-solid fa-check"></i></span
+              >Emergency Service
+            </li>
+          </ul>
+
+          <a
+            href="#appointment"
+            class="mt-9 inline-flex items-center gap-2.5 btn-blue text-white text-[12.5px] font-semibold px-8 py-3.5 rounded-lg shadow-xl shadow-blue-600/25"
+          >
+            Make An Appointment
+            <i class="fa-solid fa-arrow-right text-[11px]"></i>
+          </a>
+
+          <!-- Circular Rotating Badge -->
+          <div class="absolute z-30 w-28 h-28 lg:w-32 lg:h-32 badge-rotate">
+            <svg viewBox="0 0 100 100" class="w-full h-full">
+              <defs>
+                <path
+                  id="circlePath"
+                  d="M 50, 50 m -38, 0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"
+                />
+              </defs>
+              <circle cx="50" cy="50" r="48" fill="#0B1B3B" />
+              <text class="badge-text-path">
+                <textPath xlink:href="#circlePath" startOffset="0%">
+                  CONTACT US • CONTACT US • CONTACT US •
+                </textPath>
+              </text>
+              <g transform="translate(50,50) rotate(-45)">
+                <path
+                  d="M-6,-8 L6,0 L-6,8"
+                  stroke="white"
+                  stroke-width="2.5"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <line
+                  x1="-8"
+                  y1="0"
+                  x2="8"
+                  y2="0"
+                  stroke="white"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div
+            class="dots absolute -top-8 -right-8 w-40 h-40 pointer-events-none"
+          ></div>
+          <div
+            class="dots-2 absolute w-40 h-40 pointer-events-none"
+          ></div>
+
+          <div
+            class="relative rounded-2xl overflow-hidden shadow-2xl shadow-navy/20"
+          >
+            <img
+              src="./images/about-1.jpg"
+              alt="Dentist treating a patient"
+              width="900"
+              height="340"
+              loading="lazy"
+              decoding="async"
+              class="w-full h-[300px] sm:h-[340px] object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-navy/30 to-transparent"
+            ></div>
+          </div>
+
+          <div
+            class="absolute -bottom-12 -left-4 sm:-left-8 w-44 sm:w-56 rounded-2xl overflow-hidden border-[6px] border-white shadow-xl shadow-navy/20 about-top"
+          >
+            <img
+              src="./images/about-2.png"
+              alt="Dental procedure"
+              width="600"
+              height="480"
+              loading="lazy"
+              decoding="async"
+              class="w-full h-40 sm:h-48 object-cover"
+            />
+          </div>
+
+          <div
+            class="mt-8 sm:ml-24 lg:ml-32 bg-white border border-navy/10 rounded-2xl shadow-lg shadow-navy/10 grid grid-cols-2 overflow-hidden"
+          >
+            <div class="p-5 sm:p-6 border-b border-r border-navy/10">
+              <p class="text-2xl font-bold text-navy">
+                9k<span class="text-brand-green">+</span>
+              </p>
+              <p class="mt-1 text-[11px] text-navy/50">Project Done</p>
+            </div>
+            <div class="p-5 sm:p-6 border-b border-navy/10">
+              <p class="text-2xl font-bold text-navy">
+                136<span class="text-brand-green">+</span>
+              </p>
+              <p class="mt-1 text-[11px] text-navy/50">Specialist Doctors</p>
+            </div>
+            <div class="p-5 sm:p-6 border-r border-navy/10">
+              <p class="text-2xl font-bold text-navy">
+                10k<span class="text-brand-green">+</span>
+              </p>
+              <p class="mt-1 text-[11px] text-navy/50">Happy Clients</p>
+            </div>
+            <div class="p-5 sm:p-6">
+              <p class="text-2xl font-bold text-navy">
+                60<span class="text-brand-green">+</span>
+              </p>
+              <p class="mt-1 text-[11px] text-navy/50">Surgery Complete</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== MARQUEE STRIP ========== -->
+    <div class="marquee-strip" aria-hidden="true">
+      <div class="marquee-content">
+        <span><i class="fas fa-tooth"></i> General Dentistry</span>
+        <span><i class="fas fa-tooth"></i> Teeth Whitening</span>
+        <span><i class="fas fa-tooth"></i> Dental Implant</span>
+        <span><i class="fas fa-tooth"></i> Dental Sealants</span>
+        <span><i class="fas fa-tooth"></i> General Dentistry</span>
+        <span><i class="fas fa-tooth"></i> Teeth Whitening</span>
+        <span><i class="fas fa-tooth"></i> Dental Implant</span>
+        <span><i class="fas fa-tooth"></i> Dental Sealants</span>
+      </div>
+    </div>
+
+    <!-- ========== WHY CHOOSE US ========== -->
+    <section class="relative py-20 lg:py-24 bg-white overflow-hidden" id="choose">
+      <svg
+        class="absolute right-6 top-10 w-24 opacity-10 text-brand-blue rotate-12 pointer-events-none"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path
+          d="M12 2C7.6 2 4.5 4.7 4.5 8.2c0 1.9.8 3.4 1.4 4.9.6 1.4 1 3 1.1 4.6.1 1.4.7 3.8 1.9 3.8 1.5 0 1.2-2.3 1.6-3.8.3-1.1.7-1.9 1.8-1.9s1.5.8 1.8 1.9c.4 1.5.1 3.8 1.6 3.8 1.2 0 1.8-2.4 1.9-3.8.1-1.6.5-3.2 1.1-4.6.6-1.5 1.4-3 1.4-4.9C19.5 4.7 16.4 2 12 2z"
+        />
+      </svg>
+      <svg
+        class="absolute left-4 bottom-16 w-20 opacity-10 text-brand-green -rotate-12 pointer-events-none"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path
+          d="M12 2C7.6 2 4.5 4.7 4.5 8.2c0 1.9.8 3.4 1.4 4.9.6 1.4 1 3 1.1 4.6.1 1.4.7 3.8 1.9 3.8 1.5 0 1.2-2.3 1.6-3.8.3-1.1.7-1.9 1.8-1.9s1.5.8 1.8 1.9c.4 1.5.1 3.8 1.6 3.8 1.2 0 1.8-2.4 1.9-3.8.1-1.6.5-3.2 1.1-4.6.6-1.5 1.4-3 1.4-4.9C19.5 4.7 16.4 2 12 2z"
+        />
+      </svg>
+
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-14 lg:mb-20">
+          <p
+            class="text-[#64748B] font-semibold text-sm tracking-[0.2em] uppercase mb-4"
+          >
+            Why Choose Us
+          </p>
+          <h2
+            class="text-3xl sm:text-4xl lg:text-[48px] font-bold leading-[1.2] text-[#0B1B3B]"
+          >
+            Benefits of Our Dental Services:<br class="hidden sm:block" />
+            <span class="text-[#1E40AF]">Your Path to a Healthier Smile</span>
+          </h2>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div
+            class="relative flex justify-center lg:justify-start order-2 lg:order-1"
+          >
+            <svg
+              class="dotted-arc"
+              viewBox="0 0 140 140"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="70"
+                cy="70"
+                r="60"
+                stroke="#1E40AF"
+                stroke-width="1.5"
+                stroke-dasharray="3 8"
+                opacity="0.7"
+              />
+              <circle
+                cx="70"
+                cy="70"
+                r="48"
+                stroke="#1E40AF"
+                stroke-width="1.5"
+                stroke-dasharray="3 8"
+                opacity="0.5"
+              />
+              <circle
+                cx="70"
+                cy="70"
+                r="36"
+                stroke="#1E40AF"
+                stroke-width="1.5"
+                stroke-dasharray="3 8"
+                opacity="0.3"
+              />
+            </svg>
+
+            <div class="circle-image-wrapper relative z-10">
+              <img
+                src="./images/why-choose-us.jpg"
+                alt="Dentist with patient in a modern clinic"
+                width="800"
+                height="800"
+                loading="lazy"
+                decoding="async"
+                class="w-full h-full object-cover"
+              />
+
+               <!-- Rotating Dashed Circle -->
+              <div
+                class="absolute inset-3 rounded-full border-2 border-dashed border-white/60 animate-spin hero-dashed-circle"
+              ></div>
+
+              <div class="image-play-btn" role="button" aria-label="Play video">
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+
+            <div class="sparkle-deco sparkle-large">
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-full h-full"
+              >
+                <path
+                  d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="sparkle-deco sparkle-small">
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-full h-full"
+              >
+                <path
+                  d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="sparkle-deco sparkle-tiny">
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-full h-full"
+              >
+                <path
+                  d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <div class="order-1 lg:order-2">
+            <p class="text-[#64748B] text-base leading-relaxed max-w-lg mb-10">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore.
+            </p>
+
+            <div
+              class="flex flex-wrap items-start gap-8 sm:gap-12 mb-10 border-b border-gray-100 pb-10"
+            >
+              <div>
+                <div class="stat-number">10<span>+</span></div>
+                <div class="stat-label">Skilled Doctors</div>
+              </div>
+              <div>
+                <div class="stat-number">99<span>%</span></div>
+                <div class="stat-label">Patient Satisfaction</div>
+              </div>
+              <div>
+                <div class="stat-number">20K<span>+</span></div>
+                <div class="stat-label">Appointment Booked</div>
+              </div>
+            </div>
+
+            <ul class="space-y-4 mb-10">
+              <li class="flex items-center gap-4">
+                <span class="check-icon-custom"
+                  ><i class="fas fa-check-circle"></i
+                ></span>
+                <span class="text-[#1E293B] font-medium text-[16px]"
+                  >Easy Online Appointment Booking</span
+                >
+              </li>
+              <li class="flex items-center gap-4">
+                <span class="check-icon-custom"
+                  ><i class="fas fa-check-circle"></i
+                ></span>
+                <span class="text-[#1E293B] font-medium text-[16px]"
+                  >Experienced and Caring Dentists</span
+                >
+              </li>
+              <li class="flex items-center gap-4">
+                <span class="check-icon-custom"
+                  ><i class="fas fa-check-circle"></i
+                ></span>
+                <span class="text-[#1E293B] font-medium text-[16px]"
+                  >Advanced Dental Equipment</span
+                >
+              </li>
+            </ul>
+
+            <a
+              href="#appointment"
+              class="inline-block bg-[#2bab6b] hover:bg-[#1e8a52] text-white font-semibold text-base px-8 py-3.5 rounded-lg transition shadow-lg shadow-blue-200/50"
+            >
+              Book an Appointment
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+  <!-- ============ TECHNOLOGY SLIDER (In The Studio) ============ -->
+  <section class="py-24 studio" aria-labelledby="tech-heading" id="studio">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="max-w-2xl mx-auto text-center mb-16" data-reveal>
+        <p class="section-eyebrow mb-3">In The Studio</p>
+        <h2 id="tech-heading" class="text-3xl sm:text-4xl font-semibold text-navy">
+          Precision-driven dental technology
+        </h2>
+      </div>
+
+      <div class="relative" data-slider="studio">
+        <div class="slider-viewport" role="region" aria-roledescription="carousel" aria-label="Studio technology slider">
+          <div class="slider-track" id="studio-track">
+            <!-- 6 slides -->
+            <div class="slider-slide slider-slide--studio p-2">
+              <div class="card-lift rounded-3xl overflow-hidden border border-border bg-white h-full">
+                <img src="./images/digital-xray.jpg" alt="Digital X-ray monitor" width="800" height="176" loading="lazy" decoding="async" class="w-full h-44 object-cover" />
+                <div class="p-6">
+                  <i class="fa-solid fa-x-ray text-primary mb-3" aria-hidden="true"></i>
+                  <h3 class="font-semibold mb-1.5">Digital X-Rays</h3>
+                  <p class="text-muted text-sm">Up to 80% less radiation than film X-rays.</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider-slide slider-slide--studio p-2">
+              <div class="card-lift rounded-3xl overflow-hidden border border-border bg-white h-full">
+                <img src="./images/3d-scanning.jpeg" alt="3D dental scanning equipment" width="800" height="176" loading="lazy" decoding="async" class="w-full h-44 object-cover" />
+                <div class="p-6">
+                  <i class="fa-solid fa-cube text-primary mb-3" aria-hidden="true"></i>
+                  <h3 class="font-semibold mb-1.5">3D Dental Scanning</h3>
+                  <p class="text-muted text-sm">Impression-free scans for a precise, instant fit.</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider-slide slider-slide--studio p-2">
+              <div class="card-lift rounded-3xl overflow-hidden border border-border bg-white h-full">
+                <img src="./images/digital-smile.jpg" alt="Dental consultation with a chairside monitor" width="800" height="176" loading="lazy" decoding="async" class="w-full h-44 object-cover" />
+                <div class="p-6">
+                  <i class="fa-solid fa-display text-primary mb-3" aria-hidden="true"></i>
+                  <h3 class="font-semibold mb-1.5">Digital Smile Design</h3>
+                  <p class="text-muted text-sm">Preview your new smile before treatment begins.</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider-slide slider-slide--studio p-2">
+              <div class="card-lift rounded-3xl overflow-hidden border border-border bg-white h-full">
+                <img src="./images/laser-dentistry.jpg" alt="Laser dentistry equipment on a treatment tray" width="800" height="176" loading="lazy" decoding="async" class="w-full h-44 object-cover" />
+                <div class="p-6">
+                  <i class="fa-solid fa-bolt text-primary mb-3" aria-hidden="true"></i>
+                  <h3 class="font-semibold mb-1.5">Laser Dentistry</h3>
+                  <p class="text-muted text-sm">Softer tissue treatments with faster healing.</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider-slide slider-slide--studio p-2">
+              <div class="card-lift rounded-3xl overflow-hidden border border-border bg-white h-full">
+                <img src="./images/implants.jpeg" alt="Implant technology components on a sterile tray" width="800" height="176" loading="lazy" decoding="async" class="w-full h-44 object-cover" />
+                <div class="p-6">
+                  <i class="fa-solid fa-gear text-primary mb-3" aria-hidden="true"></i>
+                  <h3 class="font-semibold mb-1.5">Guided Implant Technology</h3>
+                  <p class="text-muted text-sm">Computer-guided placement for sub-millimeter accuracy.</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider-slide slider-slide--studio p-2">
+              <div class="card-lift rounded-3xl overflow-hidden border border-border bg-white h-full">
+                <img src="./images/hero-1.png" alt="Sterilization equipment used between patients" width="800" height="176" loading="lazy" decoding="async" class="w-full h-44 object-cover" />
+                <div class="p-6">
+                  <i class="fa-solid fa-shield-virus text-primary mb-3" aria-hidden="true"></i>
+                  <h3 class="font-semibold mb-1.5">Modern Sterilization</h3>
+                  <p class="text-muted text-sm">Hospital-grade protocols for every instrument, every time.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center gap-6 mt-8">
+          <button class="slider-arrow" data-slider-prev="studio" aria-label="Previous studio slide">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <div class="flex gap-2" id="studio-dots"></div>
+          <button class="slider-arrow" data-slider-next="studio" aria-label="Next studio slide">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SMILE DIVIDER ============ -->
+  <svg class="smile-divider" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,0 C480,60 960,60 1440,0 L1440,60 L0,60 Z"></path>
+  </svg>
+
+  <!-- ============ DOCTORS SLIDER (Team) ============ -->
+  <section id="doctors" aria-labelledby="doctors-heading" class="relative py-20 lg:py-24 bg-white overflow-hidden">
+    <!-- decorative svgs -->
+    <svg class="absolute right-6 top-10 w-24 opacity-10 text-brand-blue rotate-12 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2C7.6 2 4.5 4.7 4.5 8.2c0 1.9.8 3.4 1.4 4.9.6 1.4 1 3 1.1 4.6.1 1.4.7 3.8 1.9 3.8 1.5 0 1.2-2.3 1.6-3.8.3-1.1.7-1.9 1.8-1.9s1.5.8 1.8 1.9c.4 1.5.1 3.8 1.6 3.8 1.2 0 1.8-2.4 1.9-3.8.1-1.6.5-3.2 1.1-4.6.6-1.5 1.4-3 1.4-4.9C19.5 4.7 16.4 2 12 2z" />
+    </svg>
+    <svg class="absolute left-4 bottom-16 w-20 opacity-10 text-brand-green -rotate-12 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2C7.6 2 4.5 4.7 4.5 8.2c0 1.9.8 3.4 1.4 4.9.6 1.4 1 3 1.1 4.6.1 1.4.7 3.8 1.9 3.8 1.5 0 1.2-2.3 1.6-3.8.3-1.1.7-1.9 1.8-1.9s1.5.8 1.8 1.9c.4 1.5.1 3.8 1.6 3.8 1.2 0 1.8-2.4 1.9-3.8.1-1.6.5-3.2 1.1-4.6.6-1.5 1.4-3 1.4-4.9C19.5 4.7 16.4 2 12 2z" />
+    </svg>
+
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="max-w-2xl mx-auto text-center mb-16" data-reveal>
+        <p class="section-eyebrow mb-3">Our Team</p>
+        <h2 id="doctors-heading" class="text-3xl sm:text-4xl font-semibold text-navy">
+          Meet our dentists
+        </h2>
+      </div>
+
+      <div class="relative" data-slider="team">
+        <div class="slider-viewport" role="region" aria-roledescription="carousel" aria-label="Team slider">
+          <div class="slider-track" id="team-track">
+            <!-- 4 team slides -->
+            <div class="slider-slide slider-slide--team p-2">
+              <article class="card-lift bg-white rounded-3xl overflow-hidden border border-transparent text-center h-full">
+                <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=600&auto=format&fit=crop" alt="Portrait of Dr. Sarah Williams" width="600" height="256" loading="lazy" decoding="async" class="w-full h-64 object-cover" />
+                <div class="p-6">
+                  <h3 class="text-lg font-semibold">Dr. Sarah Williams</h3>
+                  <p class="text-primary-dark text-sm font-medium mb-1">BDS, MDS</p>
+                  <p class="text-muted text-sm mb-3">Cosmetic &amp; Restorative Dentistry · 12+ Years</p>
+                  <div class="flex justify-center gap-3 text-muted mb-4">
+                    <a href="#" aria-label="LinkedIn" class="hover:text-primary"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" aria-label="Instagram" class="hover:text-primary"><i class="fa-brands fa-instagram"></i></a>
+                  </div>
+                  <a href="#appointment" class="btn-outline text-sm px-5 py-2 rounded-full inline-block">View Profile</a>
+                </div>
+              </article>
+            </div>
+            <div class="slider-slide slider-slide--team p-2">
+              <article class="card-lift bg-white rounded-3xl overflow-hidden border border-transparent text-center h-full">
+                <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?q=80&w=600&auto=format&fit=crop" alt="Portrait of Dr. James Okafor" width="600" height="256" loading="lazy" decoding="async" class="w-full h-64 object-cover" />
+                <div class="p-6">
+                  <h3 class="text-lg font-semibold">Dr. James Okafor</h3>
+                  <p class="text-primary-dark text-sm font-medium mb-1">DDS</p>
+                  <p class="text-muted text-sm mb-3">Dental Implants &amp; Oral Surgery · 15+ Years</p>
+                  <div class="flex justify-center gap-3 text-muted mb-4">
+                    <a href="#" aria-label="LinkedIn" class="hover:text-primary"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" aria-label="Instagram" class="hover:text-primary"><i class="fa-brands fa-instagram"></i></a>
+                  </div>
+                  <a href="#appointment" class="btn-outline text-sm px-5 py-2 rounded-full inline-block">View Profile</a>
+                </div>
+              </article>
+            </div>
+            <div class="slider-slide slider-slide--team p-2">
+              <article class="card-lift bg-white rounded-3xl overflow-hidden border border-transparent text-center h-full">
+                <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=600&auto=format&fit=crop" alt="Portrait of Dr. Maria Chen" width="600" height="256" loading="lazy" decoding="async" class="w-full h-64 object-cover" />
+                <div class="p-6">
+                  <h3 class="text-lg font-semibold">Dr. Maria Chen</h3>
+                  <p class="text-primary-dark text-sm font-medium mb-1">DMD</p>
+                  <p class="text-muted text-sm mb-3">Pediatric Dentistry · 9+ Years</p>
+                  <div class="flex justify-center gap-3 text-muted mb-4">
+                    <a href="#" aria-label="LinkedIn" class="hover:text-primary"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" aria-label="Instagram" class="hover:text-primary"><i class="fa-brands fa-instagram"></i></a>
+                  </div>
+                  <a href="#appointment" class="btn-outline text-sm px-5 py-2 rounded-full inline-block">View Profile</a>
+                </div>
+              </article>
+            </div>
+            <div class="slider-slide slider-slide--team p-2">
+              <article class="card-lift bg-white rounded-3xl overflow-hidden border border-transparent text-center h-full">
+                <img src="https://images.unsplash.com/photo-1622902046580-2b47f47f5471?q=80&w=600&auto=format&fit=crop" alt="Portrait of Dr. Daniel Reyes" width="600" height="256" loading="lazy" decoding="async" class="w-full h-64 object-cover" />
+                <div class="p-6">
+                  <h3 class="text-lg font-semibold">Dr. Daniel Reyes</h3>
+                  <p class="text-primary-dark text-sm font-medium mb-1">BDS, MOrth</p>
+                  <p class="text-muted text-sm mb-3">Orthodontics · 11+ Years</p>
+                  <div class="flex justify-center gap-3 text-muted mb-4">
+                    <a href="#" aria-label="LinkedIn" class="hover:text-primary"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" aria-label="Instagram" class="hover:text-primary"><i class="fa-brands fa-instagram"></i></a>
+                  </div>
+                  <a href="#appointment" class="btn-outline text-sm px-5 py-2 rounded-full inline-block">View Profile</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center gap-6 mt-8">
+          <button class="slider-arrow" data-slider-prev="team" aria-label="Previous team slide">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <div class="flex gap-2" id="team-dots"></div>
+          <button class="slider-arrow" data-slider-next="team" aria-label="Next team slide">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- ============ BEFORE / AFTER SECTION (same markup) ============ -->
+  <section class="relative py-20 lg:py-24 bg-white overflow-hidden" aria-labelledby="ba-heading" id="result">
+    <!-- decorative svgs (kept as is) -->
+    <svg class="absolute right-6 top-10 w-24 opacity-10 text-brand-blue rotate-12 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2C7.6 2 4.5 4.7 4.5 8.2c0 1.9.8 3.4 1.4 4.9.6 1.4 1 3 1.1 4.6.1 1.4.7 3.8 1.9 3.8 1.5 0 1.2-2.3 1.6-3.8.3-1.1.7-1.9 1.8-1.9s1.5.8 1.8 1.9c.4 1.5.1 3.8 1.6 3.8 1.2 0 1.8-2.4 1.9-3.8.1-1.6.5-3.2 1.1-4.6.6-1.5 1.4-3 1.4-4.9C19.5 4.7 16.4 2 12 2z" />
+    </svg>
+    <svg class="absolute left-4 bottom-16 w-20 opacity-10 text-brand-green -rotate-12 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2C7.6 2 4.5 4.7 4.5 8.2c0 1.9.8 3.4 1.4 4.9.6 1.4 1 3 1.1 4.6.1 1.4.7 3.8 1.9 3.8 1.5 0 1.2-2.3 1.6-3.8.3-1.1.7-1.9 1.8-1.9s1.5.8 1.8 1.9c.4 1.5.1 3.8 1.6 3.8 1.2 0 1.8-2.4 1.9-3.8.1-1.6.5-3.2 1.1-4.6.6-1.5 1.4-3 1.4-4.9C19.5 4.7 16.4 2 12 2z" />
+    </svg>
+
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-16 items-center">
+      <div data-reveal="left">
+        <p class="section-eyebrow mb-3">Real Results</p>
+        <h2 id="ba-heading" class="text-3xl sm:text-4xl font-semibold mb-5 text-balance">
+          See the smile transformation
+        </h2>
+        <p class="text-muted leading-relaxed mb-6">
+          Drag the slider to compare a real patient's smile before and after a
+          whitening and bonding treatment plan.
+        </p>
+        <ul class="space-y-3 mb-8">
+          <li class="flex gap-3">
+            <i class="fa-solid fa-circle-check text-primary mt-1"></i>
+            <span class="text-sm">Treatment: Whitening + Composite Bonding</span>
+          </li>
+          <li class="flex gap-3">
+            <i class="fa-solid fa-circle-check text-primary mt-1"></i>
+            <span class="text-sm">Duration: 2 visits over 3 weeks</span>
+          </li>
+        </ul>
+        <a href="#appointment" class="btn-primary inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold">
+          Start Your Transformation
+          <i class="fa-solid fa-arrow-right text-sm"></i>
+        </a>
+      </div>
+
+      <div data-reveal="right">
+        <div id="ba-slider" class="ba-slider">
+          <span class="ba-label" style="left: 14px">BEFORE</span>
+          <span class="ba-label" style="right: 14px">AFTER</span>
+          <!-- Top image: the "after" / full image (base) -->
+          <img
+            src="./images/after.jpg"
+            alt="Smile after cosmetic dental treatment"
+            width="900"
+            height="675"
+            loading="lazy"
+            decoding="async"
+          />
+          <!-- Wrapper for the "before" image that is clipped -->
+          <div class="ba-after-wrap" id="ba-after-wrap">
+            <img
+              src="./images/before.jpg"
+              alt="Smile before cosmetic dental treatment"
+              width="900"
+              height="675"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <!-- Draggable handle -->
+          <div class="ba-handle" id="ba-handle">
+            <div class="ba-handle-btn">
+              <i class="fa-solid fa-left-right" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- ============ EMERGENCY CTA ============ -->
+    <section class="emergency-bg py-16" aria-labelledby="emergency-heading">
+      <div
+        class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left"
+      >
+        <div class="flex items-center gap-4">
+          <div
+            class="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center text-white text-2xl shrink-0"
+          >
+            <i class="fa-solid fa-kit-medical" aria-hidden="true"></i>
+          </div>
+          <div>
+            <div
+              class="flex items-center gap-2 justify-center lg:justify-start mb-1"
+            >
+              <span class="pulse-dot"></span>
+              <span
+                class="text-accent text-xs font-semibold tracking-wide uppercase"
+                >Same-day availability</span
+              >
+            </div>
+            <h2
+              id="emergency-heading"
+              class="text-2xl sm:text-3xl font-semibold text-white"
+            >
+              Need emergency dental care?
+            </h2>
+            <p class="text-slate-300 mt-1 max-w-md">
+              Don't let dental pain wait. Contact our team for prompt emergency
+              dental assistance.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a
+            href="tel:+918273776670"
+            class="btn-primary px-7 py-3.5 rounded-lg font-semibold inline-flex items-center gap-2"
+            ><i class="fa-solid fa-phone" aria-hidden="true"></i> Call Now</a
+          >
+          <a
+            href="#appointment"
+            class="hidden md:flex items-center gap-2.5 btn-blue text-white text-[16.5px] font-semibold pl-3.5 pr-5 py-2.5 rounded-lg shadow-lg shadow-blue-950/50"
+          >Book Emergency Appointment</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial Sections -->
+     <section id="testimonials" class="testimonials-section" aria-labelledby="testi-heading">
+    <!-- decorative svgs -->
+    <svg class="decor-svg decor-svg-right" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 2C7.6 2 4.5 4.7 4.5 8.2c0 1.9.8 3.4 1.4 4.9.6 1.4 1 3 1.1 4.6.1 1.4.7 3.8 1.9 3.8 1.5 0 1.2-2.3 1.6-3.8.3-1.1.7-1.9 1.8-1.9s1.5.8 1.8 1.9c.4 1.5.1 3.8 1.6 3.8 1.2 0 1.8-2.4 1.9-3.8.1-1.6.5-3.2 1.1-4.6.6-1.5 1.4-3 1.4-4.9C19.5 4.7 16.4 2 12 2z" />
+    </svg>
+    <svg class="decor-svg decor-svg-left" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 2C7.6 2 4.5 4.7 4.5 8.2c0 1.9.8 3.4 1.4 4.9.6 1.4 1 3 1.1 4.6.1 1.4.7 3.8 1.9 3.8 1.5 0 1.2-2.3 1.6-3.8.3-1.1.7-1.9 1.8-1.9s1.5.8 1.8 1.9c.4 1.5.1 3.8 1.6 3.8 1.2 0 1.8-2.4 1.9-3.8.1-1.6.5-3.2 1.1-4.6.6-1.5 1.4-3 1.4-4.9C19.5 4.7 16.4 2 12 2z" />
+    </svg>
+
+    <!-- heading -->
+    <div class="feedback-heading" data-reveal>
+      <h2 id="testi-heading">Customer Feedback</h2>
+    </div>
+
+    <!-- slider viewport -->
+    <div class="slider-viewport" data-slider="testimonials-new" role="region" aria-roledescription="carousel" aria-label="Patient testimonials">
+      <div class="slider-track-new" id="testi-track">
+        <!-- slide 1 -->
+        <div class="slider-slide-new">
+          <figure class="feedback-card">
+            <div class="feedback-stars" aria-hidden="true">★★★★★</div>
+            <blockquote class="feedback-quote">
+              “Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.”
+            </blockquote>
+            <img class="feedback-avatar" src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=200&auto=format&fit=crop" alt="Amanda Rossi" width="200" height="200" loading="lazy" decoding="async" />
+            <figcaption>
+              <div class="feedback-name">Amanda Rossi</div>
+              <div class="feedback-role">Dental Implants</div>
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- slide 2 -->
+        <div class="slider-slide-new">
+          <figure class="feedback-card">
+            <div class="feedback-stars" aria-hidden="true">★★★★★</div>
+            <blockquote class="feedback-quote">
+              “My son used to dread the dentist — now he asks when his next visit is. The pediatric team is wonderful and so gentle.”
+            </blockquote>
+            <img class="feedback-avatar" src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?q=80&w=200&auto=format&fit=crop" alt="Priya Nair" width="200" height="200" loading="lazy" decoding="async" />
+            <figcaption>
+              <div class="feedback-name">Priya Nair</div>
+              <div class="feedback-role">Pediatric Dentistry</div>
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- slide 3 -->
+        <div class="slider-slide-new">
+          <figure class="feedback-card">
+            <div class="feedback-stars" aria-hidden="true">★★★★★</div>
+            <blockquote class="feedback-quote">
+              “I finally love my smile in photos. The whitening and bonding results looked completely natural — couldn't be happier.”
+            </blockquote>
+            <img class="feedback-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop" alt="Marcus Bell" width="200" height="200" loading="lazy" decoding="async" />
+            <figcaption>
+              <div class="feedback-name">Marcus Bell</div>
+              <div class="feedback-role">Cosmetic Dentistry</div>
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- slide 4 (new) -->
+        <div class="slider-slide-new">
+          <figure class="feedback-card">
+            <div class="feedback-stars" aria-hidden="true">★★★★★</div>
+            <blockquote class="feedback-quote">
+              “The entire team made me feel comfortable from the first consultation. My root canal was completely painless.”
+            </blockquote>
+            <img class="feedback-avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop" alt="Elena Vasquez" width="200" height="200" loading="lazy" decoding="async" />
+            <figcaption>
+              <div class="feedback-name">Elena Vasquez</div>
+              <div class="feedback-role">Endodontics</div>
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- slide 5 (new) -->
+        <div class="slider-slide-new">
+          <figure class="feedback-card">
+            <div class="feedback-stars" aria-hidden="true">★★★★★</div>
+            <blockquote class="feedback-quote">
+              “I was nervous about my wisdom tooth extraction, but the surgeon was incredibly skilled. Quick recovery, zero complications.”
+            </blockquote>
+            <img class="feedback-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" alt="James Carter" width="200" height="200" loading="lazy" decoding="async" />
+            <figcaption>
+              <div class="feedback-name">James Carter</div>
+              <div class="feedback-role">Oral Surgery</div>
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- slide 6 (new) -->
+        <div class="slider-slide-new">
+          <figure class="feedback-card">
+            <div class="feedback-stars" aria-hidden="true">★★★★★</div>
+            <blockquote class="feedback-quote">
+              “The aligners have transformed my smile without anyone noticing. The whole process was smooth and well‑explained.”
+            </blockquote>
+            <img class="feedback-avatar" src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=200&auto=format&fit=crop" alt="Sophia Kim" width="200" height="200" loading="lazy" decoding="async" />
+            <figcaption>
+              <div class="feedback-name">Sophia Kim</div>
+              <div class="feedback-role">Orthodontics</div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <!-- slider controls -->
+    <div class="slider-controls">
+      <button class="slider-arrow" data-slider-prev="testimonials" aria-label="Previous testimonial">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <div class="slider-dots" id="testimonials-dots"></div>
+      <button class="slider-arrow" data-slider-next="testimonials" aria-label="Next testimonial">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <!-- stats row -->
+    <div class="stats-grid" data-reveal>
+      <div class="stat-item">
+        <div class="stat-stars" aria-hidden="true">★★★★★</div>
+        <div class="stat-value">4.9 / 5</div>
+        <div class="stat-label">Average rating</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">482</div>
+        <div class="stat-label">Verified reviews</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">98%</div>
+        <div class="stat-label">Would recommend</div>
+      </div>
+    </div>
+  </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section id="gallery" class="py-24" aria-labelledby="gallery-heading">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="max-w-2xl mx-auto text-center mb-16" data-reveal>
+          <p class="section-eyebrow mb-3">Take A Look Inside</p>
+          <h2
+            id="gallery-heading"
+            class="text-3xl sm:text-4xl font-semibold text-balance"
+          >
+            Our clinic gallery
+          </h2>
+        </div>
+        <div class="columns-2 sm:columns-3 gap-5 [column-fill:_balance]">
+          <div
+            class="gallery-item relative mb-5 break-inside-avoid"
+            data-reveal
+          >
+            <img
+              src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=700&auto=format&fit=crop"
+              alt="Clinic reception and waiting area"
+              width="700"
+              height="525"
+              loading="lazy"
+              decoding="async"
+              class="w-full"
+            />
+            <div class="overlay absolute inset-0"></div>
+          </div>
+          <div
+            class="gallery-item relative mb-5 break-inside-avoid"
+            data-reveal
+          >
+            <img
+              src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=700&auto=format&fit=crop"
+              alt="Dentist consulting with a patient"
+              width="700"
+              height="525"
+              loading="lazy"
+              decoding="async"
+              class="w-full"
+            />
+            <div class="overlay absolute inset-0"></div>
+          </div>
+          <div
+            class="gallery-item relative mb-5 break-inside-avoid"
+            data-reveal
+          >
+            <img
+              src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?q=80&w=700&auto=format&fit=crop"
+              alt="Dental equipment arranged for a treatment"
+              width="700"
+              height="525"
+              loading="lazy"
+              decoding="async"
+              class="w-full"
+            />
+            <div class="overlay absolute inset-0"></div>
+          </div>
+          <div
+            class="gallery-item relative mb-5 break-inside-avoid"
+            data-reveal
+          >
+            <img
+              src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=700&auto=format&fit=crop"
+              alt="Modern dental treatment room"
+              width="700"
+              height="525"
+              loading="lazy"
+              decoding="async"
+              class="w-full"
+            />
+            <div class="overlay absolute inset-0"></div>
+          </div>
+          <div
+            class="gallery-item relative mb-5 break-inside-avoid"
+            data-reveal
+          >
+            <img
+              src="https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=700&auto=format&fit=crop"
+              alt="Patient with a bright, healthy smile"
+              width="700"
+              height="525"
+              loading="lazy"
+              decoding="async"
+              class="w-full"
+            />
+            <div class="overlay absolute inset-0"></div>
+          </div>
+          <div
+            class="gallery-item relative mb-5 break-inside-avoid"
+            data-reveal
+          >
+            <img
+              src="./images/hero-1.png"
+              alt="Portrait of a dentist on the Mediax team"
+              width="700"
+              height="525"
+              loading="lazy"
+              decoding="async"
+              class="w-full"
+            />
+            <div class="overlay absolute inset-0"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div
+      id="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Image viewer"
+      aria-hidden="true"
+    >
+      <button
+        id="lightbox-close"
+        class="absolute top-6 right-6 text-white text-2xl w-11 h-11 rounded-full bg-white/10 hover:bg-white/20"
+        aria-label="Close image viewer"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <button
+        id="lightbox-prev"
+        class="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 text-white text-2xl w-11 h-11 rounded-full bg-white/10 hover:bg-white/20"
+        aria-label="Previous image"
+      >
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <img id="lightbox-img" src="" alt="" />
+      <button
+        id="lightbox-next"
+        class="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 text-white text-2xl w-11 h-11 rounded-full bg-white/10 hover:bg-white/20"
+        aria-label="Next image"
+      >
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <!-- ============ FAQ ============ -->
+    <section class="py-24 bg-light" aria-labelledby="faq-heading" id="faqs">
+      <div class="max-w-3xl mx-auto px-5 sm:px-8">
+        <div class="text-center mb-14" data-reveal>
+          <p class="section-eyebrow mb-3">Questions</p>
+          <h2
+            id="faq-heading"
+            class="text-3xl sm:text-4xl font-semibold text-balance"
+          >
+            Frequently asked questions
+          </h2>
+        </div>
+
+        <div data-reveal>
+          <div class="faq-item py-2">
+            <button class="faq-question py-4" aria-expanded="false">
+              <span class="font-semibold"
+                >How often should I visit the dentist?</span
+              >
+              <i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p class="text-muted pb-4 pr-8">
+                Most patients benefit from a checkup and cleaning every six
+                months, though some conditions call for more frequent visits —
+                we'll recommend a schedule at your first exam.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item py-2">
+            <button class="faq-question py-4" aria-expanded="false">
+              <span class="font-semibold">Is teeth whitening safe?</span>
+              <i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p class="text-muted pb-4 pr-8">
+                Professional, dentist-supervised whitening is safe for most
+                patients. We review your dental history first to make sure it's
+                the right fit and to minimize sensitivity.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item py-2">
+            <button class="faq-question py-4" aria-expanded="false">
+              <span class="font-semibold">Does a root canal hurt?</span>
+              <i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p class="text-muted pb-4 pr-8">
+                Modern root canals are performed under local anesthesia and feel
+                similar to getting a filling. Most patients report the pain they
+                had before treatment disappears immediately after.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item py-2">
+            <button class="faq-question py-4" aria-expanded="false">
+              <span class="font-semibold"
+                >How long do dental implants take?</span
+              >
+              <i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p class="text-muted pb-4 pr-8">
+                The full process, from placement to final crown, typically spans
+                three to six months to allow the implant to fully bond with the
+                jawbone.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item py-2">
+            <button class="faq-question py-4" aria-expanded="false">
+              <span class="font-semibold"
+                >What should I do during a dental emergency?</span
+              >
+              <i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p class="text-muted pb-4 pr-8">
+                Call us right away — we hold same-day slots for emergencies. For
+                a knocked-out tooth, keep it moist and see us within 30 minutes
+                if possible.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item py-2">
+            <button class="faq-question py-4" aria-expanded="false">
+              <span class="font-semibold">Do you treat children?</span>
+              <i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p class="text-muted pb-4 pr-8">
+                Yes — our pediatric team specializes in gentle,
+                first-visit-friendly care designed to build lifelong comfort
+                with the dentist.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item py-2">
+            <button class="faq-question py-4" aria-expanded="false">
+              <span class="font-semibold"
+                >How much does a dental consultation cost?</span
+              >
+              <i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p class="text-muted pb-4 pr-8">
+                New-patient consultations are competitively priced, and often
+                fully or partly covered by insurance — our front desk can
+                confirm your exact cost before you book.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item py-2">
+            <button class="faq-question py-4" aria-expanded="false">
+              <span class="font-semibold">Do you accept insurance?</span>
+              <i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p class="text-muted pb-4 pr-8">
+                We accept most major dental insurance plans and also offer
+                flexible in-house payment plans for treatments not fully
+                covered.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ APPOINTMENT BOOKING ============ -->
+    <section
+      id="appointment"
+      class="py-24 bg-primary-light/40"
+      aria-labelledby="appointment-heading"
+    >
+      <div
+        class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-5 gap-12 items-start"
+      >
+        <div class="lg:col-span-2" data-reveal="left">
+          <p class="section-eyebrow mb-3">Book Online</p>
+          <h2
+            id="appointment-heading"
+            class="text-3xl sm:text-4xl font-semibold mb-5 text-balance"
+          >
+            Reserve your visit in under a minute
+          </h2>
+          <p class="text-muted leading-relaxed mb-8">
+            Tell us a little about what you need and a preferred time — our care
+            coordinators confirm every request personally, usually within a few
+            hours.
+          </p>
+          <ul class="space-y-4">
+            <li class="flex gap-3">
+              <i
+                class="fa-solid fa-circle-check text-primary mt-1"
+                aria-hidden="true"
+              ></i
+              ><span>Same-week appointments usually available</span>
+            </li>
+            <li class="flex gap-3">
+              <i
+                class="fa-solid fa-circle-check text-primary mt-1"
+                aria-hidden="true"
+              ></i
+              ><span>No obligation — reschedule anytime</span>
+            </li>
+            <li class="flex gap-3">
+              <i
+                class="fa-solid fa-circle-check text-primary mt-1"
+                aria-hidden="true"
+              ></i
+              ><span>Insurance &amp; flexible payment plans accepted</span>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="lg:col-span-3 appointment-panel rounded-[1.75rem] p-6 sm:p-10"
+          data-reveal="right"
+        >
+          <div
+            id="appointment-alert"
+            class="form-alert items-center gap-2 border px-4 py-3 mb-6 text-sm"
+            role="status"
+          ></div>
+          <form id="appointment-form" novalidate>
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div class="field">
+                <label for="fullName" class="block text-sm mb-1.5"
+                  >Full Name</label
+                >
+                <input
+                  id="fullName"
+                  name="fullName"
+                  type="text"
+                  class="w-full rounded-xl px-4 py-3"
+                  placeholder="Jane Carter"
+                  required
+                />
+                <p class="error-msg mt-1"></p>
+              </div>
+              <div class="field">
+                <label for="phone" class="block text-sm mb-1.5"
+                  >Phone Number</label
+                >
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  class="w-full rounded-xl px-4 py-3"
+                  placeholder="+91 98765 43210"
+                  required
+                />
+                <p class="error-msg mt-1"></p>
+              </div>
+              <div class="field sm:col-span-2">
+                <label for="email" class="block text-sm mb-1.5">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  class="w-full rounded-xl px-4 py-3"
+                  placeholder="jane@email.com"
+                  required
+                />
+                <p class="error-msg mt-1"></p>
+              </div>
+              <div class="field">
+                <label for="date" class="block text-sm mb-1.5"
+                  >Preferred Date</label
+                >
+                <input
+                  id="date"
+                  name="date"
+                  type="date"
+                  class="w-full rounded-xl px-4 py-3"
+                  required
+                />
+                <p class="error-msg mt-1"></p>
+              </div>
+              <div class="field">
+                <label for="time" class="block text-sm mb-1.5"
+                  >Preferred Time</label
+                >
+                <select
+                  id="time"
+                  name="time"
+                  class="w-full rounded-xl px-4 py-3"
+                  required
+                >
+                  <option value="">Select a time</option>
+                  <option>9:00 AM – 11:00 AM</option>
+                  <option>11:00 AM – 1:00 PM</option>
+                  <option>1:00 PM – 3:00 PM</option>
+                  <option>3:00 PM – 5:00 PM</option>
+                  <option>5:00 PM – 7:00 PM</option>
+                </select>
+                <p class="error-msg mt-1"></p>
+              </div>
+              <div class="field sm:col-span-2">
+                <label for="service" class="block text-sm mb-1.5"
+                  >Treatment / Service</label
+                >
+                <select
+                  id="service"
+                  name="service"
+                  class="w-full rounded-xl px-4 py-3"
+                  required
+                >
+                  <option value="">Select a treatment</option>
+                  <option>General Checkup &amp; Cleaning</option>
+                  <option>Cosmetic Dentistry</option>
+                  <option>Teeth Whitening</option>
+                  <option>Dental Implants</option>
+                  <option>Root Canal Treatment</option>
+                  <option>Orthodontics</option>
+                  <option>Pediatric Dentistry</option>
+                  <option>Emergency Visit</option>
+                </select>
+                <p class="error-msg mt-1"></p>
+              </div>
+              <div class="field sm:col-span-2">
+                <label for="message" class="block text-sm mb-1.5"
+                  >Message
+                  <span class="text-muted font-normal">(optional)</span></label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="3"
+                  class="w-full rounded-xl px-4 py-3"
+                  placeholder="Anything we should know before your visit?"
+                ></textarea>
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              class="btn-primary btn-submit w-full sm:w-auto mt-7 px-8 py-3.5 rounded-lg font-semibold inline-flex items-center justify-center gap-2"
+            >
+              <span class="spinner"></span>
+              <span class="btn-label" data-default="Book Appointment"
+                >Book Appointment</span
+              >
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA BANNER ============ -->
+    <section id="cta-banner" class="relative bg-navy-deep overflow-hidden">
+      <svg
+        class="absolute left-0 top-0 h-full w-1/3 opacity-90 pointer-events-none"
+        viewBox="0 0 400 400"
+        preserveAspectRatio="none"
+        fill="none"
+      >
+        <path
+          d="M0 0h180C120 80 60 160 90 240c30 80 120 100 140 160H0V0z"
+          fill="#0e1e45"
+        />
+        <path
+          d="M0 0h110C70 90 30 170 55 245c25 75 95 95 110 155H0V0z"
+          fill="#1d4ed8"
+          opacity=".35"
+        />
+      </svg>
+      <svg
+        class="absolute right-0 top-0 h-full w-1/3 opacity-90 pointer-events-none rotate-180"
+        viewBox="0 0 400 400"
+        preserveAspectRatio="none"
+        fill="none"
+      >
+        <path
+          d="M0 0h180C120 80 60 160 90 240c30 80 120 100 140 160H0V0z"
+          fill="#0e1e45"
+        />
+        <path
+          d="M0 0h110C70 90 30 170 55 245c25 75 95 95 110 155H0V0z"
+          fill="#1d4ed8"
+          opacity=".35"
+        />
+      </svg>
+
+      <i
+        class="fa-solid fa-heart-pulse absolute right-[8%] bottom-8 text-6xl text-white/10 pointer-events-none hidden md:block"
+      ></i>
+
+      <div class="relative max-w-4xl mx-auto px-4 py-20 lg:py-24 text-center">
+        <div class="flex items-center justify-center gap-3">
+          <span class="h-px w-10 bg-brand-green/70"></span>
+          <span
+            class="text-brand-green text-[11px] font-semibold tracking-[3px] uppercase"
+            >Contact Us</span
+          >
+          <span class="h-px w-10 bg-brand-green/70"></span>
+        </div>
+        <h2
+          class="mt-4 text-2xl sm:text-3xl lg:text-[38px] font-bold text-white leading-snug"
+        >
+          We're Passionate, Dedicated<br class="hidden sm:block" />
+          And Friendly...
+        </h2>
+        <div class="mt-9 flex flex-wrap justify-center gap-4">
+          <a
+            href="#appointment"
+            class="btn-blue text-white text-[12.5px] font-semibold px-8 py-3.5 rounded-lg flex items-center gap-2 shadow-xl shadow-blue-950/40"
+          >
+            <i class="fa-regular fa-calendar-check"></i> Make An Appointment
+          </a>
+          <a
+            href="#"
+            class="btn-green text-white text-[12.5px] font-semibold px-8 py-3.5 rounded-lg flex items-center gap-2 shadow-xl shadow-green-950/40"
+          >
+            <i class="fa-solid fa-file-invoice"></i> Get The Estimate
+          </a>
+          <a
+            href="#"
+            class="border-2 border-white/40 text-white text-[12.5px] font-semibold px-8 py-3.5 rounded-lg flex items-center gap-2 hover:bg-white/10 transition"
+          >
+            <i class="fa-solid fa-briefcase-medical"></i> Our Clinical Plans
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="py-24" aria-labelledby="contact-heading">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-5 gap-12">
+        <div class="lg:col-span-2" data-reveal="left">
+          <p class="section-eyebrow mb-3">Get In Touch</p>
+          <h2
+            id="contact-heading"
+            class="text-3xl sm:text-4xl font-semibold mb-6 text-balance"
+          >
+            We'd love to hear from you
+          </h2>
+          <ul class="space-y-5">
+            <li class="flex gap-4">
+              <i class="fa-solid fa-location-dot text-primary mt-1"></i
+              ><span>128 Street, New York, USA</span>
+            </li>
+            <li class="flex gap-4">
+              <i class="fa-solid fa-phone text-primary mt-1"></i
+              ><a href="tel:+918273776670" class="hover:text-primary-dark"
+                >+91 82737 76670</a
+              >
+            </li>
+            <li class="flex gap-4">
+              <i class="fa-solid fa-envelope text-primary mt-1"></i
+              ><a
+                href="mailto:hello@mediaxdental.com"
+                class="hover:text-primary-dark"
+                >hello@mediaxdental.com</a
+              >
+            </li>
+            <li class="flex gap-4">
+              <i class="fa-solid fa-clock text-primary mt-1"></i
+              ><span>Mon–Fri 9am–7pm · Sat 10am–4pm</span>
+            </li>
+          </ul>
+
+          <div class="mt-10 rounded-2xl overflow-hidden border border-border">
+            <div class="h-52 relative overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.4686933973526!2d78.43743827493476!3d17.389280783498243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9722bc2bbc5f%3A0x4a51bd731ad7739!2sEdone%20Solutions!5e0!3m2!1sen!2sin!4v1789999265589!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                title="Edone Solutions Google Maps Location"
+              ></iframe>
+            </div>
+            <div class="p-4 flex items-center justify-between bg-white">
+              <span class="text-sm font-medium">128 Street, New York, USA</span>
+              <a
+                href="#"
+                class="text-primary-dark text-sm font-semibold inline-flex items-center gap-1.5"
+                >Get Directions <i class="fa-solid fa-arrow-right text-xs"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="lg:col-span-3 appointment-panel rounded-[1.75rem] p-6 sm:p-10"
+          data-reveal="right"
+        >
+          <div
+            id="contact-alert"
+            class="form-alert items-center gap-2 border px-4 py-3 mb-6 text-sm"
+            role="status"
+          ></div>
+          <form id="contact-form" novalidate>
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div class="field">
+                <label for="c-name" class="block text-sm mb-1.5">Name</label>
+                <input
+                  id="c-name"
+                  name="name"
+                  type="text"
+                  class="w-full rounded-xl px-4 py-3"
+                  required
+                />
+                <p class="error-msg mt-1"></p>
+              </div>
+              <div class="field">
+                <label for="c-email" class="block text-sm mb-1.5">Email</label>
+                <input
+                  id="c-email"
+                  name="email"
+                  type="email"
+                  class="w-full rounded-xl px-4 py-3"
+                  required
+                />
+                <p class="error-msg mt-1"></p>
+              </div>
+              <div class="field">
+                <label for="c-phone" class="block text-sm mb-1.5"
+                  >Phone
+                  <span class="text-muted font-normal">(optional)</span></label
+                >
+                <input
+                  id="c-phone"
+                  name="phone"
+                  type="tel"
+                  class="w-full rounded-xl px-4 py-3"
+                />
+                <p class="error-msg mt-1"></p>
+              </div>
+              <div class="field">
+                <label for="c-subject" class="block text-sm mb-1.5"
+                  >Subject</label
+                >
+                <input
+                  id="c-subject"
+                  name="subject"
+                  type="text"
+                  class="w-full rounded-xl px-4 py-3"
+                  required
+                />
+                <p class="error-msg mt-1"></p>
+              </div>
+              <div class="field sm:col-span-2">
+                <label for="c-message" class="block text-sm mb-1.5"
+                  >Message</label
+                >
+                <textarea
+                  id="c-message"
+                  name="message"
+                  rows="4"
+                  class="w-full rounded-xl px-4 py-3"
+                  required
+                ></textarea>
+                <p class="error-msg mt-1"></p>
+              </div>
+            </div>
+            <button
+              type="submit"
+              class="btn-primary btn-submit w-full sm:w-auto mt-7 px-8 py-3.5 rounded-lg font-semibold inline-flex items-center justify-center gap-2"
+            >
+              <span class="spinner"></span>
+              <span class="btn-label" data-default="Send Message"
+                >Send Message</span
+              >
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="pt-20 pb-8" id="footer">
+      <div
+        class="max-w-7xl mx-auto px-5 sm:px-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-14 border-b border-white/10"
+      >
+        <div>
+          <a href="#home" class="flex items-center gap-3 mb-4">
+            <span
+              class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#2bab6b] to-[#1e8a52] flex items-center justify-center"
+            >
+              <i class="fa-solid fa-tooth text-white" aria-hidden="true"></i>
+            </span>
+            <span class="text-lg font-semibold text-white">Mediax Dental</span>
+          </a>
+          <p class="text-sm leading-relaxed mb-5 text-slate-400">
+            Comfortable, modern dentistry for the whole family — trusted in New
+            York since 2005.
+          </p>
+          <div class="flex gap-3">
+            <a
+              href="#"
+              aria-label="Facebook"
+              class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#2bab6b] transition"
+              ><i class="fa-brands fa-facebook-f text-white"></i
+            ></a>
+            <a
+              href="#"
+              aria-label="Instagram"
+              class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#2bab6b] transition"
+              ><i class="fa-brands fa-instagram text-white"></i
+            ></a>
+            <a
+              href="#"
+              aria-label="LinkedIn"
+              class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#2bab6b] transition"
+              ><i class="fa-brands fa-linkedin-in text-white"></i
+            ></a>
+          </div>
+        </div>
+        <div class="foot">
+          <div>
+          <h3 class="font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#doctors">Doctors</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-4">Services</h3>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="#services">Dental Implants</a></li>
+            <li><a href="#services">Cosmetic Dentistry</a></li>
+            <li><a href="#services">Root Canal Treatment</a></li>
+            <li><a href="#services">Teeth Whitening</a></li>
+            <li><a href="#services">Orthodontics</a></li>
+          </ul>
+        </div>
+        </div>
+        <div class="foot-cat">
+          <h3 class="font-semibold mb-4">Contact</h3>
+          <ul class="space-y-2.5 text-sm">
+            <li class="flex gap-2">
+              <i class="fa-solid fa-phone mt-1 text-[#2bab6b]"></i>+91 82737
+              76670
+            </li>
+            <li class="flex gap-2">
+              <i class="fa-solid fa-envelope mt-1 text-[#2bab6b]"></i
+              >hello@mediaxdental.com
+            </li>
+            <li class="flex gap-2">
+              <i class="fa-solid fa-location-dot mt-1 text-[#2bab6b]"></i>128
+              Street, New York, USA
+            </li>
+            <li class="flex gap-2">
+              <i class="fa-solid fa-clock mt-1 text-[#2bab6b]"></i>Mon–Fri
+              9am–7pm · Sat 10am–4pm
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="max-w-7xl mx-auto px-5 sm:px-8 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm"
+      >
+        <a href="https://www.edonesolution.com/">
+          <p>
+          © <span id="current-year">2026</span> Edone Solutions. All Rights
+          Reserved.
+          </p>
+        </a>
+        <div class="flex gap-6">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ============ FLOATING ACTIONS ============ -->
+    <div class="fab-group fixed bottom-6 right-6 flex flex-col gap-3">
+      <div class="fab-wrap relative flex items-center justify-end">
+        <span
+          class="fab-tooltip absolute right-16 bg-ink text-white text-xs px-3 py-1.5 rounded-lg"
+          >Chat on WhatsApp</span
+        >
+        <a
+          href="https://wa.me/918273776670"
+          target="_blank"
+          rel="noopener"
+          class="fab fab-enter fab-whatsapp text-white"
+          style="animation-delay: 0.1s"
+          aria-label="Chat with us on WhatsApp"
+          ><i class="fa-brands fa-whatsapp text-xl"></i
+        ></a>
+      </div>
+      <div class="fab-wrap relative flex items-center justify-end">
+        <span
+          class="fab-tooltip absolute right-16 bg-ink text-white text-xs px-3 py-1.5 rounded-lg"
+          >Call the clinic</span
+        >
+        <a
+          href="tel:+918273776670"
+          class="fab fab-enter fab-call text-white"
+          style="animation-delay: 0.2s"
+          aria-label="Call the clinic"
+          ><i class="fa-solid fa-phone text-lg"></i
+        ></a>
+      </div>
+      <div class="fab-wrap relative flex items-center justify-end">
+        <span
+          class="fab-tooltip absolute right-16 bg-ink text-white text-xs px-3 py-1.5 rounded-lg"
+          >Book appointment</span
+        >
+        <a
+          href="#appointment"
+          class="fab fab-enter fab-book text-white"
+          style="animation-delay: 0.3s"
+          aria-label="Book an appointment"
+          ><i class="fa-regular fa-calendar-check text-lg"></i
+        ></a>
+      </div>
+    </div>
+     <!-- ============ JAVASCRIPT ============ -->
+  <script>
+    (function() {
+      'use strict';
+
+      // ----- helper: get slides per view based on container width & slide type -----
+      function getSlidesPerView(track) {
+        const firstSlide = track.querySelector('.slider-slide');
+        if (!firstSlide) return 1;
+        const slideClass = firstSlide.className;
+        const viewportWidth = window.innerWidth;
+
+        // match your CSS breakpoints:
+        // < 640px => 1 (both types)
+        // 640–1023 => studio:2, team:2
+        // >=1024 => studio:3, team:4
+        if (slideClass.includes('slider-slide--studio')) {
+          if (viewportWidth >= 1024) return 3;
+          if (viewportWidth >= 640) return 2;
+          return 1;
+        } else if (slideClass.includes('slider-slide--team')) {
+          if (viewportWidth >= 1024) return 4;
+          if (viewportWidth >= 640) return 2;
+          return 1;
+        }
+        return 1; // fallback
+      }
+
+      // ----- create dots -----
+      function buildDots(sliderId, track, dotsContainer) {
+        const slides = Array.from(track.children);
+        const perView = getSlidesPerView(track);
+        const totalSlides = slides.length;
+        const pageCount = Math.ceil(totalSlides / perView);
+
+        dotsContainer.innerHTML = '';
+        for (let i = 0; i < pageCount; i++) {
+          const dot = document.createElement('button');
+          dot.classList.add('slider-dot');
+          dot.setAttribute('aria-label', `Go to slide page ${i + 1}`);
+          dot.dataset.pageIndex = i;
+          dotsContainer.appendChild(dot);
+        }
+        return { pageCount, perView, totalSlides };
+      }
+
+      // ----- update dot active state -----
+      function setActiveDot(dotsContainer, activePageIndex) {
+        const dots = dotsContainer.querySelectorAll('.slider-dot');
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === activePageIndex);
+        });
+      }
+
+      // ----- main slider class (per slider) -----
+      class InfiniteSlider {
+        constructor(sliderId, trackId, dotsId, options = {}) {
+          this.sliderId = sliderId;
+          this.track = document.getElementById(trackId);
+          this.dotsContainer = document.getElementById(dotsId);
+          this.autoInterval = options.autoInterval || 4000; // 4 seconds
+          this.autoTimer = null;
+          this.currentIndex = 0; // current "page" index (0-based)
+          this.perView = 1;
+          this.pageCount = 1;
+          this.totalSlides = 0;
+          this.isTransitioning = false;
+
+          // bind
+          this.handleResize = this.debounce(this.handleResize.bind(this), 150);
+          this.next = this.next.bind(this);
+          this.prev = this.prev.bind(this);
+          this.goToPage = this.goToPage.bind(this);
+          this.startAuto = this.startAuto.bind(this);
+          this.stopAuto = this.stopAuto.bind(this);
+
+          this.init();
+        }
+
+        debounce(fn, wait) {
+          let timeout;
+          return (...args) => {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => fn.apply(this, args), wait);
+          };
+        }
+
+        init() {
+          // build dots initially
+          this.refreshDimensions();
+          this.setupEventListeners();
+          this.goToPage(0, false); // jump to first page without transition
+          this.startAuto();
+        }
+
+        refreshDimensions() {
+          this.totalSlides = this.track.children.length;
+          this.perView = getSlidesPerView(this.track);
+          this.pageCount = Math.ceil(this.totalSlides / this.perView);
+
+          // rebuild dots (if container exists)
+          if (this.dotsContainer) {
+            this.dotsContainer.innerHTML = '';
+            for (let i = 0; i < this.pageCount; i++) {
+              const dot = document.createElement('button');
+              dot.classList.add('slider-dot');
+              dot.setAttribute('aria-label', `Go to slide page ${i + 1}`);
+              dot.dataset.pageIndex = i;
+              dot.addEventListener('click', (e) => {
+                const pageIndex = parseInt(e.currentTarget.dataset.pageIndex, 10);
+                this.goToPage(pageIndex);
+                this.stopAuto();
+                this.startAuto(); // reset timer
+              });
+              this.dotsContainer.appendChild(dot);
+            }
+          }
+
+          // clamp currentIndex if out of bounds
+          if (this.currentIndex >= this.pageCount) {
+            this.currentIndex = this.pageCount - 1;
+          }
+          if (this.currentIndex < 0) this.currentIndex = 0;
+
+          // ensure track transform matches current index
+          this.updateTransform(false);
+        }
+
+        updateTransform(animate = true) {
+          if (!this.track) return;
+          const slideWidth = 100 / this.perView; // percentage per slide
+          // calculate translate: each slide is `slideWidth`% of track width?
+          // Actually track width is 100% of viewport, each slide takes (100/perView)% of viewport.
+          // So we shift by (currentIndex * perView) slides => percentage = (currentIndex * perView * slideWidth)
+          // But we want to move by full pages. Using page index:
+          const shiftPercent = -(this.currentIndex * 100); // because moving one page = 100% of viewport width? 
+          // Wait: moving one page of `perView` slides = perView * (100/totalSlides?) Not correct.
+          // Let's think: track is flex, each slide has width = (100/perView)% of viewport.
+          // So shifting by one page (perView slides) means shifting by 100% of viewport.
+          // Correct: translateX(-currentIndex * 100) percent of the track width.
+          // But track width is set by its content? Actually track is 100% of viewport width? No.
+          // In flex, track width is sum of slide widths. Each slide width = (100/perView)% of viewport.
+          // So total track width = (totalSlides * 100 / perView)% of viewport.
+          // Shifting by one page (perView slides) = shift by 100% of viewport = (perView * 100 / perView)%? Let's derive:
+          // We want to move the track so that the first slide of the page aligns with viewport left.
+          // The offset in percentage of track width? Simpler: use translateX with percentage relative to viewport.
+          // But transform percentage is relative to the element's own width (the track). That's messy.
+          // Better: compute pixel offset? But we want responsive. 
+          // Alternative: use `transform: translateX(-${this.currentIndex * 100}%)` — this works if track width equals viewport width.
+          // But track width is larger than viewport. So percentage relative to track width would be wrong.
+          // To fix: we can set slide widths as percentages of viewport, and use `translateX(-${this.currentIndex * (100 / this.perView) * this.perView}%)`? No.
+          // Let's recalc:
+          // We want to shift by `currentIndex * perView` slides. Each slide width = (100/perView)% of viewport.
+          // Total shift in viewport percentage = currentIndex * perView * (100/perView) = currentIndex * 100 % of viewport.
+          // But translateX percentage on track is relative to track width, not viewport.
+          // Track width = (totalSlides * (100/perView))% of viewport? Actually track width is auto, slides are flex items with min-width.
+          // Easier: set track width via CSS? But we can use transform with percentage relative to viewport if we set track width to 100% of viewport? Not with flex.
+          // Hmm. The robust method: use `translateX(-${this.currentIndex * (100 / this.perView) * this.perView}%)`? No.
+          // Let's reconsider: common pattern: each slide has width: calc(100% / perView) of viewport, so track total width = (totalSlides * 100 / perView)%. 
+          // To move by one page (perView slides), we need to shift by 100% of viewport = (perView * 100 / perView)% = 100% of viewport.
+          // But transform on track uses its own width. So shift in % of track width = (100% of viewport) / (track width in % of viewport) * 100? 
+          // That's messy. The clean solution: use `transform: translateX(-${this.currentIndex * 100}%)` but ensure that the track's width is exactly 100% of viewport (i.e., no flex overflow). 
+          // But with flex, track width is content width. To fix: set `.slider-track { width: 100%; }` and `.slider-slide { flex: 0 0 (100%/perView); }` But that doesn't allow overflow because track width 100% + slides wider than 100% cause overflow visible? Actually `overflow: hidden` on viewport and track width 100% would squash? No, flex items with flex-shrink:0 keep their width, track width becomes larger but we can't set width 100% and have it overflow.
+          // The robust approach: keep track width auto, compute pixel offset based on viewport width and perView.
+          // Let's switch to pixel-based transform for precision.
+          const viewportWidth = this.track.parentElement.clientWidth;
+          const slideWidthPx = viewportWidth / this.perView;
+          const shiftPx = -(this.currentIndex * this.perView * slideWidthPx);
+          // But note: if we are on last page and there are fewer slides than perView? we clamp currentIndex.
+          // Also if currentIndex page would overshoot, clamp shift so last slide aligns right.
+          const totalSlides = this.totalSlides;
+          const maxShift = -((totalSlides - this.perView) * slideWidthPx);
+          const finalShift = Math.max(shiftPx, maxShift); // ensure not shifting too far left
+          // But if totalSlides <= perView, maxShift is negative? then we should shift 0.
+          const safeShift = (totalSlides <= this.perView) ? 0 : Math.max(shiftPx, maxShift);
+
+          this.track.style.transition = animate ? 'transform 0.55s cubic-bezier(0.22, 1, 0.36, 1)' : 'none';
+          this.track.style.transform = `translateX(${safeShift}px)`;
+
+          // update dots active
+          this.setActiveDot();
+        }
+
+        setActiveDot() {
+          if (!this.dotsContainer) return;
+          const dots = this.dotsContainer.querySelectorAll('.slider-dot');
+          dots.forEach((dot, idx) => {
+            dot.classList.toggle('active', idx === this.currentIndex);
+          });
+        }
+
+        goToPage(pageIndex, animate = true) {
+          if (this.isTransitioning && animate) return;
+          if (pageIndex < 0) pageIndex = this.pageCount - 1;
+          if (pageIndex >= this.pageCount) pageIndex = 0;
+
+          this.currentIndex = pageIndex;
+          this.updateTransform(animate);
+        }
+
+        next() {
+          this.goToPage(this.currentIndex + 1);
+        }
+
+        prev() {
+          this.goToPage(this.currentIndex - 1);
+        }
+
+        startAuto() {
+          this.stopAuto();
+          this.autoTimer = setInterval(() => {
+            this.next();
+          }, this.autoInterval);
+        }
+
+        stopAuto() {
+          if (this.autoTimer) {
+            clearInterval(this.autoTimer);
+            this.autoTimer = null;
+          }
+        }
+
+        setupEventListeners() {
+          // previous / next buttons
+          const prevBtn = document.querySelector(`[data-slider-prev="${this.sliderId}"]`);
+          const nextBtn = document.querySelector(`[data-slider-next="${this.sliderId}"]`);
+          if (prevBtn) {
+            prevBtn.addEventListener('click', (e) => {
+              e.preventDefault();
+              this.prev();
+              this.stopAuto();
+              this.startAuto();
+            });
+          }
+          if (nextBtn) {
+            nextBtn.addEventListener('click', (e) => {
+              e.preventDefault();
+              this.next();
+              this.stopAuto();
+              this.startAuto();
+            });
+          }
+
+          // pause auto on hover of viewport
+          const viewport = this.track.closest('.slider-viewport');
+          if (viewport) {
+            viewport.addEventListener('mouseenter', () => this.stopAuto());
+            viewport.addEventListener('mouseleave', () => this.startAuto());
+          }
+
+          // handle resize
+          window.addEventListener('resize', this.handleResize);
+        }
+
+        handleResize() {
+          const newPerView = getSlidesPerView(this.track);
+          if (newPerView !== this.perView) {
+            // recalc pages
+            const oldPage = this.currentIndex;
+            this.perView = newPerView;
+            this.totalSlides = this.track.children.length;
+            this.pageCount = Math.ceil(this.totalSlides / this.perView);
+            // adjust currentIndex to stay on similar position
+            this.currentIndex = Math.min(oldPage, this.pageCount - 1);
+            if (this.currentIndex < 0) this.currentIndex = 0;
+
+            // rebuild dots
+            if (this.dotsContainer) {
+              this.dotsContainer.innerHTML = '';
+              for (let i = 0; i < this.pageCount; i++) {
+                const dot = document.createElement('button');
+                dot.classList.add('slider-dot');
+                dot.setAttribute('aria-label', `Go to slide page ${i + 1}`);
+                dot.dataset.pageIndex = i;
+                dot.addEventListener('click', (e) => {
+                  const pageIndex = parseInt(e.currentTarget.dataset.pageIndex, 10);
+                  this.goToPage(pageIndex);
+                  this.stopAuto();
+                  this.startAuto();
+                });
+                this.dotsContainer.appendChild(dot);
+              }
+            }
+            this.updateTransform(false);
+          } else {
+            // even if perView same, viewport width changed -> recalc shift
+            this.updateTransform(false);
+          }
+        }
+
+        destroy() {
+          this.stopAuto();
+          window.removeEventListener('resize', this.handleResize);
+        }
+      }
+
+      // ----- initialise sliders when DOM ready -----
+      document.addEventListener('DOMContentLoaded', () => {
+        // Studio slider (6 slides)
+        const studioSlider = new InfiniteSlider('studio', 'studio-track', 'studio-dots', {
+          autoInterval: 3500
+        });
+
+        // Team slider (4 slides)
+        const teamSlider = new InfiniteSlider('team', 'team-track', 'team-dots', {
+          autoInterval: 4000
+        });
+
+        // optional: expose to window for debugging (remove in production)
+        // window.studioSlider = studioSlider;
+        // window.teamSlider = teamSlider;
+      });
+    })();
+  </script>
+    <script src="./script/script.js"></script>
+  </body>
+</html>
+
+
+
